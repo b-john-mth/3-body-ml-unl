@@ -392,7 +392,6 @@ def main():
         X_test_new_var,
         regressor=ridge_regressor,
         degrees=range(1, 3))
-    #y_pred_test_mass = best_pipeline_ridge_a.predict(X_test_with_mass)
     np.savetxt('augmented_polynomial_submission.csv', y_pred_test_new, delimiter=',')
     plot_y_yhat(y_val_new_var, y_val_pred_new, plot_title='Polinomial augmented')
     print("\Polinomial Regression Results for augmented features:")
@@ -462,5 +461,6 @@ def main():
     plot_y_yhat(y_val, y_val_pred_knn, plot_title='Test and validation output KNN')
     print("\nResults of kNN Regression Validation:")
     print(knn_results)
+
 
 main()
